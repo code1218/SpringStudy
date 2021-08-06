@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import com.spring.mvc.mapper.StudentMapper;
 import com.spring.mvc.model.Student;
 
 @Component
@@ -18,13 +19,13 @@ public class StudentDAO {
 	public void setDataSource(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-	/*
+	
 	public List<Student> select(){
 		String sql = "select * from student_mst";
-		List<Student> students = jdbcTemplate.query(null, null)
+		List<Student> students = jdbcTemplate.query(sql, new StudentMapper());
 		return students;
 	}
-	*/
+	
 	public void insert(Student student) {
 		String sql = "insert into student_mst values(0, ?, ?, ?)";
 		jdbcTemplate.update(sql, student.getId(), student.getName(), student.getPhone());
