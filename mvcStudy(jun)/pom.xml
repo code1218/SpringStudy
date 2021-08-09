@@ -39,6 +39,13 @@
 		    <version>${org.springframework-version}</version>
 		</dependency>
 		
+		<!-- CGLIB -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		
 		<!-- MySql -->
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>

@@ -2,10 +2,12 @@ package com.spring.mvc.context;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("diConnectionEx")
 public class DiConnectionEx {
 	
-	@Autowired
+	@Autowired(required = false)
 	@Qualifier("diex2")
 	private DiContext diex;
 	
@@ -32,10 +34,11 @@ public class DiConnectionEx {
 
 	@Override
 	public String toString() {
-		return diex.diConnection();
+		if(diex == null) {
+			return "";
+		}else {
+			return diex.diConnection();
+		}
 	}
-	
-	
-	
 
 }
