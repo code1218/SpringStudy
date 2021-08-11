@@ -11,7 +11,7 @@ public class DiTest {
 		an.register(com.spring.mvc.context.DiAppConfig.class);
 		an.refresh();
 		
-		ApplicationContext context = new AnnotationConfigApplicationContext(com.spring.mvc.context.DiAppConfig.class);
+		//ApplicationContext context = new AnnotationConfigApplicationContext(com.spring.mvc.context.DiAppConfig.class);
 		//ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/mvc/context/DiBeans.xml");
 		//DiConnectionEx di = (DiConnectionEx)context.getBean("diconnectionEx");
 		DiConnectionEx di = (DiConnectionEx)an.getBean("diconnectionEx");

@@ -11,7 +11,7 @@
 	xml파일에 추가하여야하는 소스코드
 	<context:annotation-config/>
 	
-	@Autowired
+	@Autowired -> ref)
 		- 속성 [@Autowired(required = false)] 주입될 빈이 없을 경우에 Null로 자동 처리
 	@Qualifier("bean의 이름")
 
@@ -19,7 +19,7 @@
 	@Component
 	xml의 id와 동일한 방식 -> @Component("인스턴스명")
 	
-	@Value("값")
+	@Value("값") -> value
 	private String name;
 	
 	@Component	- @Controller(model, view 합쳐주는 역할)	- @RequestMapping
@@ -51,9 +51,14 @@
 	<context:component-scan base-package="com.spring.mvc.context"/>
 	<!-- <context:annotation-config /> -->
 	
-	<!--  
 	
+	<!-- 
 	<bean id="diex1" class="com.spring.mvc.context.DiEx1">
+		<property name="name" value="김준일"></property>
+		<property name="phone" value="010-9988-1916"></property>
+	</bean>
+	
+	<bean id="diex3" class="com.spring.mvc.context.DiEx1">
 		<property name="name" value="김준일"></property>
 		<property name="phone" value="010-9988-1916"></property>
 	</bean>
@@ -66,7 +71,6 @@
 	<bean id="diConnectionEx" class="com.spring.mvc.context.DiConnectionEx">
 		<property name="diex" ref="diex1"></property>
 	</bean>
-	
-	-->
+	 -->
 
 </beans>

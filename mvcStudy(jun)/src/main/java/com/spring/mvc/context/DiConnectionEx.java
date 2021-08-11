@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class DiConnectionEx {
 	
 	@Autowired(required = false)
-	@Qualifier("diex2")
+	@Qualifier("diex")
 	private DiContext diex;
 	
 	public DiConnectionEx() {

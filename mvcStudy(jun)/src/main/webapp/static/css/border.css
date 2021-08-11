@@ -1,0 +1,119 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.border_contain {
+    margin: 30px auto;
+    width: 1000px;
+}
+
+#border_icon {
+    display: inline-block;
+    margin: 0px 10px 20px 50px;
+}
+
+.border_insert_button {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    width: 900px;
+}
+
+.border_insert_button button {
+    margin: 0px 5px;
+    width: 70px;
+    height: 30px;
+    font-size: 0.9em;
+    font-weight: 400;
+    background-color: deepskyblue;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.border_insert_button button:hover {
+    background-color:rgb(0, 181, 241);
+}
+
+.border_body {
+    display: bol;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 50px;
+}
+
+.border_table {
+    width: 900px;
+    border-collapse: collapse;
+}
+
+.border_table tr {
+    height: 30px;
+}
+
+.border_table tr th {
+    border-top: 2px solid rgb(0, 162, 255);
+    border-bottom: 1px solid rgb(223, 223, 223);
+    background: rgb(240, 240, 240);
+}
+
+.border_table tr td {
+    border-bottom: 1px solid rgb(223, 223, 223);
+    text-align: center;
+}
+
+
+.border_table tr .border_index{
+    border-right: 1px solid rgb(230, 230, 230);
+    width: 90px;
+}
+
+.border_table tr .border_title{
+    border-right: 1px solid rgb(230, 230, 230);
+    width: 450px;
+}
+
+.border_table tr .border_writer{
+    border-right: 1px solid rgb(230, 230, 230);
+    width: 135px;
+}
+
+.border_table tr .border_date{
+    border-right: 1px solid rgb(230, 230, 230);
+    width: 135px;
+}
+
+.border_table tr .border_count{
+    width: 90px;
+}
+
+.this_page {
+    margin: 10px 50px 0px 0px;
+    text-align: right;
+}
+
+.select_page {
+    text-align: center;
+}
+
+.search {
+	margin:30px 0px;
+	display: flex;
+	justify-content: center;
+}
+.search input{
+	margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+

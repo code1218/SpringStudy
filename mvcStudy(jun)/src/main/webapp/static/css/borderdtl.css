@@ -1,0 +1,51 @@
+.borderDtl_table {
+    box-sizing: border-box;
+    width: 900px;
+    border-collapse: collapse;
+    border-top: 2px solid rgb(0, 162, 255);
+}
+
+.borderDtl_table tr {
+    height: 30px;
+}
+
+.borderDtl_table th, .borderDtl_table td {
+    box-sizing: border-box;
+    padding: 0px 12px 0px 5px;
+    border: 1px solid rgb(223, 223, 223);
+    width: 225px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.border_content {
+    margin: 0px;
+    border: 1px solid rgb(223, 223, 223);
+}
+
+.border_button {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.border_button button {
+    margin: 0px 5px;
+    width: 70px;
+    height: 30px;
+    font-size: 0.9em;
+    font-weight: 400;
+    background-color: deepskyblue;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.border_button button:hover {
+    background-color:rgb(0, 181, 241);
+}
+
+.borderDtl_table .footer_td {
+    width: 675px;
+}
+

@@ -3,7 +3,7 @@ package com.spring.mvc.context;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("diex3")
+@Component("diex2")
 public class DiEx2 implements DiContext{
 	
 	@Value("김준일")
