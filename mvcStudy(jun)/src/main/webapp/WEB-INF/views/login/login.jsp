@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
     <script src="https://kit.fontawesome.com/c3df4d7d1c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/login.css" />
 </head>
 <body>
     <nav id="header">
@@ -17,12 +17,12 @@
     </nav>
     <div id="container">
         <div id="login_content">
-            <form id="loginform" method="post" action="login">
-            	<input type="hidden" id="loginflag" name="loginflag" value="${loginflag }">
+            <form id="loginform" method="post" action="loginCheck">
+            	<input type="hidden" id="loginflag" name="login_flag" value="${loginModel.login_flag }">
                 <div class="id_area">
                     <div class="input_row">
                         <span class="input_box">
-                            <input type="text" id="id" class="input_text" placeholder="아이디" name="user_id" value="${user_id }">
+                            <input type="text" id="id" class="input_text" placeholder="아이디" name="login_id" value="${loginModel.login_id }">
                         </span>
                     </div>
                 </div>
@@ -31,12 +31,12 @@
                 <div class="pwd_area">
                     <div class="input_row">
                         <span class="input_box">
-                            <input type="password" id="pwd" class="input_text" placeholder="비밀번호" name="user_pwd">
+                            <input type="password" id="pwd" class="input_text" placeholder="비밀번호" name="login_pwd">
                         </span>
                     </div>
                 </div>
                 <div id="pwd_error" class="error">비밀번호를 입력해 주세요.</div>
-				<input type="hidden" id="submitflag" name="submitflag" value="false">
+				<input type="hidden" id="submitflag" name="submit_flag" value="false">
                 <input type="button" class="input_submit" value="로그인"></botton>
 
                 <div class="check_info">
@@ -54,6 +54,6 @@
         </div>
     </div>
 
-    <script src="js/login.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 </html>
