@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.spring.mvc.model.LoginModel;
+import com.spring.mvc.model.UserBean;
 
 @Repository
 public class LoginDAO {
@@ -33,7 +34,36 @@ public class LoginDAO {
 		});
 		return flag;
 	}
+	
+	public UserBean getUserBean(LoginModel loginModel) {
+		String sql = "select user_id, user_pwd, user_name, user_birthday from user_mst where user_id = ? and user_pwd = ?";
+		UserBean userBean = jdbcTemplate.queryForObject(sql, new Object[] {loginModel.getLogin_id(), loginModel.getLogin_pwd()},
+				new RowMapper<UserBean>() {
+			@Override
+			public UserBean mapRow(ResultSet rs, int rowNum) throws SQLException {
+				UserBean bean = new UserBean();
+				bean.setUser_id(rs.getString(1));
+				bean.setUser_pwd(rs.getString(2));
+				bean.setUser_name(rs.getString(3));
+				bean.setUser_birthday(rs.getString(4));
+				return bean;
+			}
+		});
+		return userBean;
+	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 
 
