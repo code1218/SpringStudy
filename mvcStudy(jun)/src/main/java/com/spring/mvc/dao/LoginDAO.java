@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.spring.mvc.model.LoginModel;
-import com.spring.mvc.model.UserBean;
+import com.spring.mvc.model.beans.UserBean;
 
 @Repository
 public class LoginDAO {

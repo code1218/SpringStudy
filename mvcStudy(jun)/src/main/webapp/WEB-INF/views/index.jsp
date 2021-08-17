@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,15 +14,7 @@
 </head>
 <body>
     <div id="container">
-    	<c:choose>
-    		<c:when test="${empty loginUserBean }">
-    			<jsp:include page="/WEB-INF/views/header_login.jsp"></jsp:include>
-    		</c:when>
-    		<c:otherwise>
-    			<jsp:include page="/WEB-INF/views/header_logout.jsp"></jsp:include>
-    		</c:otherwise>
-    	</c:choose>
-    	
+    	<jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
         <main>
             <article id="mainimage">
                 <div id="swiper-container__id" class="swiper-container">
@@ -42,9 +33,7 @@
                
             </article>
         </main>
-        
-        <jsp:include page="/WEB-INF/views/footer.jsp"></jsp:include>
-        
+        <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
