@@ -18,4 +18,17 @@ public class MybatisBorderDaoImpl implements MyBatisBorderDao {
 	public List<BorderBean> getBorderList() {
 		return session.selectList(NAME_SPACE + ".getBorderList");
 	}
+	
+	@Override
+	public BorderBean getBorderDtl(int border_code) {
+		return session.selectOne(NAME_SPACE + ".getBorderList", border_code);
+	}
 }
+
+
+
+
+
+
+
+
