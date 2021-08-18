@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.spring.mvc.model.study.Student" alias="StudentType"/>
+	</typeAliases>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="org.gjt.mm.mysql.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/springstudy?serverTimezone=UTC"/>
+        <property name="username" value="root"/>
+        <property name="password" value="toor"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper resource="com/spring/mvc/mybatis/StudentMapper.xml"/>
+  </mappers>
+</configuration>
