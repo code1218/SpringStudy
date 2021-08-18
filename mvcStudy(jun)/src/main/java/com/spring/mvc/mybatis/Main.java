@@ -24,10 +24,19 @@ public class Main {
 		SqlSession session = sqlSessionFactory.openSession();
 		
 		List<Student> list = session.selectList("Student.getStudentList");
+		List<Integer> seqList = session.selectList("Student.getStudentSeq");
+		int seq = 2;
+		String name = session.selectOne("Student.getStudentNameOne", seq);
 		
 		for(Student s : list) {
 			System.out.println(s);
 		}
+		
+		for(Integer i : seqList) {
+			System.out.println(i);
+		}
+		
+		System.out.println("학생이름: " + name);
 	}
 
 }
