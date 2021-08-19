@@ -1,4 +1,4 @@
-package com.spring.mvc.model.study;
+package com.spring.study.model.study;
 
 public class ModelEx {
 	private String msg;

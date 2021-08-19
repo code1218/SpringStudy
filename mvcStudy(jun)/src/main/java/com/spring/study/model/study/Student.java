@@ -1,4 +1,4 @@
-package com.spring.mvc.model.study;
+package com.spring.study.model.study;
 
 public class Student {
 	private int seq; //순번

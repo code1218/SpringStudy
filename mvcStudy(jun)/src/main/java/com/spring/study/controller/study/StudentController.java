@@ -1,4 +1,4 @@
-package com.spring.mvc.controller.study;
+package com.spring.study.controller.study;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.spring.mvc.dao.study.StudentDAO;
-import com.spring.mvc.model.study.Student;
+import com.spring.study.dao.study.StudentDAO;
+import com.spring.study.model.study.Student;
 
 @Controller
 public class StudentController {

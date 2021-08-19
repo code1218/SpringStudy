@@ -1,4 +1,4 @@
-package com.spring.mvc.context;
+package com.spring.study.context;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

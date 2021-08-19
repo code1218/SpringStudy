@@ -1,4 +1,4 @@
-package com.spring.mvc.context;
+package com.spring.study.context;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

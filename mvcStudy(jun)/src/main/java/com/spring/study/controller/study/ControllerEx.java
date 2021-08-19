@@ -1,4 +1,4 @@
-package com.spring.mvc.controller.study;
+package com.spring.study.controller.study;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.spring.mvc.model.study.ModelEx;
+import com.spring.study.model.study.ModelEx;
 
 @Controller
 public class ControllerEx {

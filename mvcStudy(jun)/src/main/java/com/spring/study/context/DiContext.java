@@ -1,4 +1,4 @@
-package com.spring.mvc.context;
+package com.spring.study.context;
 
 public interface DiContext {
 	public String diConnection();

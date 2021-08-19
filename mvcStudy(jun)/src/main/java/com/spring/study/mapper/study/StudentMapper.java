@@ -1,11 +1,11 @@
-package com.spring.mvc.mapper.study;
+package com.spring.study.mapper.study;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.spring.mvc.model.study.Student;
+import com.spring.study.model.study.Student;
 
 public class StudentMapper implements RowMapper<Student>{
 	@Override
