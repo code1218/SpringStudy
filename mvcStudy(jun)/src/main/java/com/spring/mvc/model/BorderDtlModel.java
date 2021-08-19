@@ -6,6 +6,7 @@ public class BorderDtlModel {
 	private String writer_name;
 	private int border_count;
 	private String border_file;
+	private String border_tempfile;
 	private String border_content;
 	private String page;
 	private int border_code_pre;
@@ -42,6 +43,12 @@ public class BorderDtlModel {
 	}
 	public void setBorder_file(String border_file) {
 		this.border_file = border_file;
+	}
+	public String getBorder_tempfile() {
+		return border_tempfile;
+	}
+	public void setBorder_tempfile(String border_tempfile) {
+		this.border_tempfile = border_tempfile;
 	}
 	public String getBorder_content() {
 		return border_content;

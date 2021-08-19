@@ -74,6 +74,7 @@ public class BorderController {
 	public ModelAndView borderDataInsert(BorderInsertModel borderInsertModel, HttpServletRequest request) throws IllegalStateException, IOException {
 		ModelAndView view = new ModelAndView("/border/border");
 		borderInsertModel.setUser_ip(request.getRemoteAddr());
+		//String realPath = request.getRealPath("/jspEx/upload");
 		borderInsertService.fileUpload(borderInsertModel);
 		return view;
 	}

@@ -31,6 +31,7 @@ public class BorderDtlService {
 		model.setWriter_name(borderBean.getWriter_name());
 		model.setBorder_count(borderBean.getBorder_count());
 		model.setBorder_file(borderBean.getBorder_file());
+		model.setBorder_tempfile(borderBean.getBorder_tempfile());
 		model.setBorder_content(borderBean.getBorder_content());
 		model.setBorder_code_pre(borderBean_pre.getBorder_code());
 		model.setBorder_title_pre(borderBean_pre.getBorder_title());
