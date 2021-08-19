@@ -1,5 +1,8 @@
 package com.spring.mvc.controller;
 
+import java.io.IOException;
+import java.util.UUID;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,7 @@ import com.spring.mvc.model.BorderInsertModel;
 import com.spring.mvc.model.BorderListModel;
 import com.spring.mvc.model.beans.BorderBean;
 import com.spring.mvc.service.border.BorderDtlService;
+import com.spring.mvc.service.border.BorderInsertService;
 import com.spring.mvc.service.border.BorderListSet;
 
 @Controller
@@ -27,6 +31,9 @@ public class BorderController {
 	
 	@Autowired
 	BorderDtlService borderDtlService;
+	
+	@Autowired
+	BorderInsertService borderInsertService;
 	
 	@Autowired
 	BorderDAO borderDAO;
@@ -64,11 +71,9 @@ public class BorderController {
 	}
 	
 	@RequestMapping(value = "/borderdatainsert", method = RequestMethod.POST, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-	public ModelAndView borderDataInsert(BorderInsertModel borderInsertModel) {
+	public ModelAndView borderDataInsert(BorderInsertModel borderInsertModel) throws IllegalStateException, IOException {
 		ModelAndView view = new ModelAndView("/border/border");
-		String originalFile = borderInsertModel.getFile().getOriginalFilename();
-		String originalFileExtension = originalFile.substring(originalFile.lastIndexOf("."),originalFile.lastIndexOf(".")+1);
-		System.out.println(originalFileExtension);
+		borderInsertService.fileUpload(borderInsertModel);
 		return view;
 	}
 	
