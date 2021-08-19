@@ -5,6 +5,7 @@ public class BorderBean {
 	private String border_title;
 	private String border_content;
 	private String border_file;
+	private String border_tempfile;
 	private String writer_name;
 	private String writer_ip;
 	private String border_date;
@@ -33,6 +34,12 @@ public class BorderBean {
 	}
 	public void setBorder_file(String border_file) {
 		this.border_file = border_file;
+	}
+	public String getBorder_tempfile() {
+		return border_tempfile;
+	}
+	public void setBorder_tempfile(String border_tempfile) {
+		this.border_tempfile = border_tempfile;
 	}
 	public String getWriter_name() {
 		return writer_name;

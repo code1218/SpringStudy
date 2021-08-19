@@ -23,6 +23,11 @@ public class MybatisBorderDaoImpl implements MyBatisBorderDao {
 	public BorderBean getBorderDtl(int border_code) {
 		return session.selectOne(NAME_SPACE + ".getBorderList", border_code);
 	}
+	
+	@Override
+	public Integer insertBorder(BorderBean borderBean) {
+		return session.insert(NAME_SPACE + ".insertBorder", borderBean);
+	}
 }
 
 

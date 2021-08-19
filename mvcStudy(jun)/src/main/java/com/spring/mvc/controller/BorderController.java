@@ -71,8 +71,9 @@ public class BorderController {
 	}
 	
 	@RequestMapping(value = "/borderdatainsert", method = RequestMethod.POST, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-	public ModelAndView borderDataInsert(BorderInsertModel borderInsertModel) throws IllegalStateException, IOException {
+	public ModelAndView borderDataInsert(BorderInsertModel borderInsertModel, HttpServletRequest request) throws IllegalStateException, IOException {
 		ModelAndView view = new ModelAndView("/border/border");
+		borderInsertModel.setUser_ip(request.getRemoteAddr());
 		borderInsertService.fileUpload(borderInsertModel);
 		return view;
 	}
