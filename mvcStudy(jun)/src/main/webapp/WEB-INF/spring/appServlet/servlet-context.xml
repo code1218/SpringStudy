@@ -45,6 +45,13 @@
 		<beans:property name="basePackage" value="com.spring.mvc.dao"></beans:property>
 	</beans:bean>
 	
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="52428800"></beans:property>
+		<!-- 최대 업로드 가능한 바이트 크기, -1의 값은 제한이 없을 의미, 기본값 -1 반환 자료형 long-->
+		<beans:property name="maxInMemorySize" value="52428800"></beans:property>
+		<!-- 디스크에 임시 파일을 생성하기 전에 메모리에 보관할 수 있는 최대 바이트 크기, 기본 값은 1MB -->
+	</beans:bean>
+	
 </beans:beans>
 
 

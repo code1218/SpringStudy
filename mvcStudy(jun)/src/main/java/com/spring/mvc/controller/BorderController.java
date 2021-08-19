@@ -64,11 +64,11 @@ public class BorderController {
 	}
 	
 	@RequestMapping(value = "/borderdatainsert", method = RequestMethod.POST, consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-	public ModelAndView borderDataInsert(@RequestParam("border_title")String border_title, HttpServletRequest request ) {
+	public ModelAndView borderDataInsert(BorderInsertModel borderInsertModel) {
 		ModelAndView view = new ModelAndView("/border/border");
-		//borderInsertModel.setUser_ip(request.getRemoteAddr());
-		System.out.println(border_title);
-		//borderDAO.insertBorder(borderInsertModel);
+		String originalFile = borderInsertModel.getFile().getOriginalFilename();
+		String originalFileExtension = originalFile.substring(originalFile.lastIndexOf("."),originalFile.lastIndexOf(".")+1);
+		System.out.println(originalFileExtension);
 		return view;
 	}
 	
