@@ -40,15 +40,13 @@
                         <tr>
                             <th>첨부파일</th>
                             <td colspan="3">
-                            	<a download href="C:/김준일강사수업/fileupload/${borderDtlModel.border_tempfile }">${borderDtlModel.border_file }</a>
-                            <!-- 
                             	<c:forTokens var="fileName" items="${borderDtlModel.border_file }" delims="," varStatus="st">
-                            		<a download href="C:/김준일강사수업/fileupload/${borderDtlModel.border_file }">${fileName }</a>
+                            		<a download href="/fileDownload?originName=dddd.jpg&tempName=0sadjf9jd9fj0sdf.jpg">${fileName }</a>
                             		<c:if test="${not st.last }">
                             		/
                             		</c:if>
                             	</c:forTokens>
-                             -->
+                             
                             </td>
                         </tr>
                     </table>

@@ -25,6 +25,16 @@ public class MybatisBorderDaoImpl implements MyBatisBorderDao {
 	}
 	
 	@Override
+	public BorderBean getPreBorderCode(int border_code) {
+		return session.selectOne(NAME_SPACE + ".getPreBorderCode", border_code);
+	}
+	
+	@Override
+	public BorderBean getNextBorderCode(int border_code) {
+		return session.selectOne(NAME_SPACE + ".getNextBorderCode", border_code);
+	}
+	
+	@Override
 	public Integer insertBorder(BorderBean borderBean) {
 		return session.insert(NAME_SPACE + ".insertBorder", borderBean);
 	}

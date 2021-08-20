@@ -15,7 +15,46 @@
 	</select>
 	
 	<select id="getBorderDtl" resultType="com.spring.mvc.model.beans.BorderBean">
-		select * from border_mst where border_code = #{border_code};
+		select 
+			* 
+		from 
+			border_mst 
+		where 
+			border_code = #{border_code};
+	</select>
+	
+	<select id="getPreBorderCode" resultType="com.spring.mvc.model.beans.BorderBean">
+		select
+			border_code,
+			border_title
+		from
+			border_mst
+		where
+			border_code = (
+				select
+					max(border_code)
+				from
+					border_mst
+				where
+					border_code &lt; #{border_code}
+				);
+	</select>
+	
+	<select id="getNextBorderCode" resultType="com.spring.mvc.model.beans.BorderBean">
+		select
+			border_code,
+			border_title
+		from
+			border_mst
+		where
+			border_code = (
+				select
+					min(border_code)
+				from
+					border_mst
+				where
+					border_code &gt; #{border_code}
+				);
 	</select>
 	
 	<insert id="insertBorder" parameterType="com.spring.mvc.model.beans.BorderBean">
