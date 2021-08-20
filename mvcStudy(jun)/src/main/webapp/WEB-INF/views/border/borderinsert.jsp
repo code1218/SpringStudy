@@ -36,7 +36,7 @@
                                 <td>${loginUserBean.user_name }</td>
                                 <th>첨부파일</th>
                                 <td>
-                                	<input type="file" name="file"><br>
+                                	<input type="file" multiple="multiple" name="file"><br>
                                 	<!-- 
                                 	<input type="file" name="file"><br>
                                 	<input type="file" name="file"><br>

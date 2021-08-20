@@ -5,7 +5,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class BorderInsertModel {
 	private String border_title;
 	private String user_name;
-	private MultipartFile file;
+	private MultipartFile[] file;
 	private String content_textarea;
 	private String user_ip;
 	
@@ -21,10 +21,10 @@ public class BorderInsertModel {
 	public void setUser_name(String user_name) {
 		this.user_name = user_name;
 	}
-	public MultipartFile getFile() {
+	public MultipartFile[] getFile() {
 		return file;
 	}
-	public void setFile(MultipartFile file) {
+	public void setFile(MultipartFile[] file) {
 		this.file = file;
 	}
 	public String getContent_textarea() {
