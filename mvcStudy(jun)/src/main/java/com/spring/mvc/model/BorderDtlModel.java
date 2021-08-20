@@ -1,12 +1,15 @@
 package com.spring.mvc.model;
 
+import java.util.List;
+
+import com.spring.mvc.model.beans.FileBean;
+
 public class BorderDtlModel {
 	private String border_title;
 	private String border_date;
 	private String writer_name;
 	private int border_count;
-	private String border_file;
-	private String border_tempfile;
+	private List<FileBean> fileName;
 	private String border_content;
 	private String page;
 	private int border_code_pre;
@@ -38,17 +41,11 @@ public class BorderDtlModel {
 	public void setBorder_count(int border_count) {
 		this.border_count = border_count;
 	}
-	public String getBorder_file() {
-		return border_file;
+	public List<FileBean> getFileName() {
+		return fileName;
 	}
-	public void setBorder_file(String border_file) {
-		this.border_file = border_file;
-	}
-	public String getBorder_tempfile() {
-		return border_tempfile;
-	}
-	public void setBorder_tempfile(String border_tempfile) {
-		this.border_tempfile = border_tempfile;
+	public void setFileName(List<FileBean> fileName) {
+		this.fileName = fileName;
 	}
 	public String getBorder_content() {
 		return border_content;

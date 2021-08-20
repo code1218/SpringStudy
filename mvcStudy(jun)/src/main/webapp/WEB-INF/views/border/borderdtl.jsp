@@ -40,12 +40,12 @@
                         <tr>
                             <th>첨부파일</th>
                             <td colspan="3">
-                            	<c:forTokens var="fileName" items="${borderDtlModel.border_file }" delims="," varStatus="st">
-                            		<a download href="/fileDownload?originName=dddd.jpg&tempName=0sadjf9jd9fj0sdf.jpg">${fileName }</a>
+                            	<c:forEach var="fileName" items="${borderDtlModel.fileName }" varStatus="st">
+                            		<a href="/fileDownload?originName=${fileName.originName }&tempName=${fileName.tempName}">${fileName.originName }</a>
                             		<c:if test="${not st.last }">
                             		/
                             		</c:if>
-                            	</c:forTokens>
+                            	</c:forEach>
                              
                             </td>
                         </tr>

@@ -1,5 +1,7 @@
 package com.spring.mvc.service.border;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringTokenizer;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import com.spring.mvc.dao.BorderDAO;
 import com.spring.mvc.dao.MyBatisBorderDao;
 import com.spring.mvc.model.BorderDtlModel;
 import com.spring.mvc.model.beans.BorderBean;
+import com.spring.mvc.model.beans.FileBean;
 
 @Service
 public class BorderDtlService {
@@ -30,23 +33,23 @@ public class BorderDtlService {
 		model.setBorder_date(borderBean.getBorder_date());
 		model.setWriter_name(borderBean.getWriter_name());
 		model.setBorder_count(borderBean.getBorder_count());
-		model.setBorder_file(borderBean.getBorder_file());
-		model.setBorder_tempfile(borderBean.getBorder_tempfile());
 		
-		StringBuilder fileUri = new StringBuilder();
-		StringTokenizer oName = new StringTokenizer(borderBean.getBorder_file(), ",");
-		StringTokenizer tName = new StringTokenizer(borderBean.getBorder_tempfile(), ",");
-		
-		for(int i = 0; oName.hasMoreTokens(); i++) {
-			tName.hasMoreTokens();
-			fileUri.append("originName=");
-			fileUri.append(oName.nextToken());
-			fileUri.append("&tempName=");
-			fileUri.append(tName.nextToken());
-			fileUri.append(",");
+		if(borderBean.getBorder_file() != null && borderBean.getBorder_tempfile() != null) {
+			StringTokenizer oName = new StringTokenizer(borderBean.getBorder_file(), ",");
+			StringTokenizer tName = new StringTokenizer(borderBean.getBorder_tempfile(), ",");
+			
+			List<FileBean> fileUri = new ArrayList<FileBean>();
+			
+			for(int i = 0; oName.hasMoreTokens(); i++) {
+				tName.hasMoreTokens();
+				FileBean fileBean = new FileBean();
+				fileBean.setOriginName(oName.nextToken());
+				fileBean.setTempName(tName.nextToken());
+				fileUri.add(fileBean);
+			}
+			model.setFileName(fileUri);
 		}
-		fileUri.delete(fileUri.length()-1, fileUri.length());
-		System.out.println(fileUri.toString());
+		
 		model.setBorder_content(borderBean.getBorder_content());
 		if(borderBean_pre != null) {
 			model.setBorder_code_pre(borderBean_pre.getBorder_code());
