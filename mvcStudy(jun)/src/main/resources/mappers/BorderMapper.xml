@@ -40,7 +40,7 @@
 				);
 	</select>
 	
-	<select id="getNextBorderCode" resultType="com.spring.mvc.model.beans.BorderBean">
+	<select id="getNextBorderCode"  resultType="com.spring.mvc.model.beans.BorderBean">
 		select
 			border_code,
 			border_title

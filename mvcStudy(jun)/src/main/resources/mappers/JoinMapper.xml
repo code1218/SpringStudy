@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.spring.mvc.dao.JoinDAO">
+	<select id="joinIdCheck" resultType="Integer">
+		select
+			count(*)
+		from
+			user_mst
+		where
+			user_id = #{id}
+	</select>
+	
+	<insert id="joinInsert" parameterType="com.spring.mvc.model.beans.JoinBean">
+		insert into
+			user_mst
+		values(
+			#{join_id},
+			#{join_pwd},
+			#{join_name},
+			#{join_email},
+			now(),
+			now()
+		);
+	</insert>
+</mapper>

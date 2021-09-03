@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring.mvc.dao.BorderDAO;
 import com.spring.mvc.dao.MyBatisBorderDao;
+import com.spring.mvc.dao.MybatisBorderDaoImpl;
 import com.spring.mvc.model.beans.BorderBean;
 
 @Service
@@ -15,7 +16,7 @@ public class BorderListSet {
 	private BorderDAO borderDAO;
 	
 	@Autowired
-	private MyBatisBorderDao myBatisBorderDao;
+	private MyBatisBorderDao myBatisBorderDao = new MybatisBorderDaoImpl();
 	
 	ArrayList<BorderBean> borderListAll;
 	private int totalListCount;

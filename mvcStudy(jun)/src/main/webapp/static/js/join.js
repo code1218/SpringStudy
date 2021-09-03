@@ -32,7 +32,7 @@ id_text.onblur = () => {
         join_warning[0].style.display = "block";
     }else { 
         join_warning[0].style.display = "none";
-		joinform.submit();
+		location.href = "/joinIdCheck?join_id="+id_text.value;
     }
 	
 }
